@@ -2,7 +2,6 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
-
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
@@ -35,7 +34,7 @@ export default function SignUp() {
       toast.success("Sign up successful!");
       setLoading(false);
       setError(null);
-      navigate('/sign-in')
+      navigate("/sign-in");
     } catch (error) {
       toast.error("Internal server error");
       setLoading(false);
